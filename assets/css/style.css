@@ -1,0 +1,985 @@
+/* =====================================
+   VARIABLES
+===================================== */
+:root {
+    --white: #ffffff;
+    --beige: #f5efe6;
+    --gold: #d4b483;
+    --green: #4f7a5b;
+    --dark: #333333;
+    --gray: #777777;
+    --shadow:
+        0 10px 30px rgba(0, 0, 0, 0.08);
+    --radius: 20px;
+}
+
+/* =====================================
+   RESET
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    /* Texto normal */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Playfair Display', serif;
+    /* Títulos elegantes */
+
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+section {
+    padding: 100px 0;
+}
+
+.section-light {
+    background: #f7f2ec;
+}
+
+.section-white {
+    background: #ffffff;
+}
+
+/* =====================================
+   GOOGLE FONT
+===================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap');
+
+
+/* =====================================
+   BOTONES
+===================================== */
+
+.btn-whatsapp {
+    background: linear-gradient(135deg, var(--green), #3d6248);
+    /* Gradiente sutil */
+    color: white;
+    padding: 14px 32px;
+    /* Un poco más grande para mayor presencia */
+    border-radius: 50px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    /* Espaciado para elegancia */
+    border: none;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    /* Rebote suave */
+    box-shadow: 0 4px 15px rgba(79, 122, 91, 0.3);
+    /* Sombra difusa color green */
+}
+
+.btn-whatsapp:hover {
+    background: linear-gradient(135deg, #3d6248, var(--green));
+    /* Inversión del gradiente */
+    transform: translateY(-4px);
+    /* Movimiento más notorio */
+    color: white;
+    box-shadow: 0 8px 20px rgba(79, 122, 91, 0.4);
+    /* Sombra más amplia al pasar el mouse */
+}
+
+.btn-whatsapp:active {
+    transform: translateY(0);
+    /* Efecto de "clic" */
+}
+
+/* 2. Botón "Ver Servicios" (Estilo Ghost / Contorno, muy elegante) */
+.btn-gold {
+    background-color: transparent;
+    /* Fondo transparente */
+    color: white;
+    padding: 14px 28px;
+    border-radius: 50px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    border: 2px solid var(--gold);
+    /* Borde dorado */
+}
+
+.btn-gold:hover {
+    background-color: var(--gold);
+    /* Se rellena al pasar el mouse */
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* =====================================
+   TITULOS
+===================================== */
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: var(--gold);
+    /* Título grande y dorado */
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.text-gold {
+    color: var(--gold);
+    /* Usará el dorado que ya definiste en tus variables */
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* =====================================
+   NAVBAR
+===================================== */
+.navbar-spa {
+    color: white !important;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+}
+
+.logo {
+    width: 120px;
+    /* Aumenta el ancho para que sea legible */
+    height: auto;
+    /* Esto es clave: mantiene la proporción sin deformar */
+    object-fit: contain;
+}
+
+.nav-link {
+    color: #4f7a5b !important;
+    font-weight: 500;
+    margin-left: 15px;
+    transition: .3s;
+}
+
+.nav-link:hover {
+    color: #333333 !important;
+}
+
+/* =====================================
+   HERO BACKGROUND
+===================================== */
+
+#inicio {
+    position: relative;
+    min-height: 100vh;
+    padding: 10px 0 60px;
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.50),
+            rgba(0, 0, 0, 0.50)),
+        url('../images/hero/spa-hero.png');
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    color: white;
+
+}
+
+#inicio::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    /* Altura del fundido */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, var(--beige) 100%);
+    pointer-events: none;
+    /* Para que no interfiera con los botones */
+}
+
+/* =====================================
+   HERO
+===================================== */
+
+.hero-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, .15);
+    padding: 10px 20px;
+    border-radius: 50px;
+    backdrop-filter: blur(10px);
+    margin-bottom: 20px;
+    font-weight: 200;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    /* Tamaño grande */
+    font-weight: 400;
+    /* Ligero, no negrita */
+    line-height: 1.1;
+    margin-bottom: 20px;
+    color: white;
+    /* Aseguramos que sea blanco */
+}
+
+.text-gold {
+    color: var(--gold) !important;
+    /* !important asegura que se aplique el color */
+    font-weight: 600;
+    /* Un poco más marcado para resaltar */
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    max-width: 650px;
+}
+
+/* Contenedor de botones (Asegúrate de que tengan un poco de espacio entre ellos) */
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+/* =========================================
+   PROMOCIÓN ESPECIAL - ESTILO ELEGANTE
+========================================= */
+
+#promocion {
+    background: var(--beige);
+    padding: 100px 0;
+}
+
+/* Contenedor principal de la card */
+.promotion-card {
+    display: flex;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 20px;
+    /* <--- ESTO ES LO QUE BUSCAS: Espacio entre bordes y contenido */
+    gap: 30px;
+    /* <--- Esto separa la imagen del texto */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    align-items: center;
+}
+
+/* Imagen a la izquierda */
+.promotion-image {
+    flex-shrink: 0;
+    /* Evita que la imagen se achique */
+    width: 40%;
+}
+
+.promotion-image img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 15px;
+    /* Bordes redondeados para la imagen también */
+}
+
+/* Contenido a la derecha */
+.promotion-content {
+    width: 60%;
+    padding: 30px;
+}
+
+.promo-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    /* <--- Esto separa los dos grupos (tiempo y personas) */
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    /* Línea divisoria elegante */
+    color: #444;
+}
+
+.promo-info span {
+    display: flex;
+    align-items: center;
+    /* Centra el icono con el texto verticalmente */
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.promo-info i {
+    margin-right: 10px;
+    /* Separa el icono del texto */
+    color: var(--gold);
+    /* Usamos tu color dorado para los iconos */
+    font-size: 1.2rem;
+    /* Un poco más grandes para que luzcan mejor */
+}
+
+/* Estilos de texto */
+.promotion-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    line-height: 1.2;
+    /* Mejora la lectura */
+}
+
+.promo-price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--gold);
+    margin-bottom: 20px;
+}
+
+/* Lista en 2 columnas */
+.promo-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* Forma más limpia de hacer 2 columnas */
+    gap: 15px;
+    /* Un poco más de aire entre elementos */
+    list-style: none;
+    padding: 0;
+    margin-bottom: 25px;
+}
+
+.promo-list li {
+    font-size: 0.95rem;
+    color: #444;
+}
+
+/* =====================================
+   SERVICIOS
+===================================== */
+
+/* --- Cabecera de Sección --- */
+.section-label {
+    display: block;
+    color: var(--gold);
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 2px;
+    background: var(--gold);
+    margin: 15px auto 0 auto;
+}
+
+/* --- Tarjetas de Servicio --- */
+.service-card {
+    position: relative;
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: visible;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    position: relative;
+    padding-bottom: 25px;
+    height: 100%;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.service-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+}
+
+.service-content {
+    padding: 20px;
+}
+
+.service-content h4 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* --- Precios --- */
+.service-price {
+    font-size: 0.95rem;
+    color: #555;
+    margin-top: 15px;
+    font-weight: 400;
+}
+
+.service-price strong {
+    color: var(--gold);
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.icon-circle {
+    width: 60px;
+    height: 60px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: -30px auto 10px auto;
+    /* El truco: sube el icono 30px hacia arriba */
+    border: 3px solid #f8f8f8;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: var(--gold);
+    /* Tu color dorado */
+    font-size: 1.5rem;
+    position: relative;
+    z-index: 2;
+}
+
+/* Contenedor principal para la imagen y el círculo */
+.spa-image-container {
+    position: relative;
+    /* Importante para el posicionamiento absoluto */
+    width: 300px;
+    /* Ajusta el tamaño según necesites */
+    height: 300px;
+    border-radius: 50%;
+    /* Crea el círculo perfecto */
+    overflow: hidden;
+    /* Recorta la imagen al círculo */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    /* Sombra suave para profundidad */
+    border: 8px solid #fff;
+    /* Borde blanco grueso como en el ejemplo */
+}
+
+/* Imagen de fondo */
+.spa-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Asegura que la imagen llene el contenedor sin distorsionar */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Elemento circular blanco con el icono */
+.icon-badge {
+    position: absolute;
+    top: 50%;
+    /* Centrado vertical */
+    left: 50%;
+    /* Centrado horizontal */
+    transform: translate(-50%, -50%);
+    /* Ajuste perfecto del centro */
+    width: 100px;
+    /* Tamaño del círculo del icono */
+    height: 100px;
+    background-color: #fff;
+    /* Fondo blanco */
+    border-radius: 50%;
+    /* Círculo perfecto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sombra más suave */
+    border: 4px solid #fff;
+    /* Pequeño borde para definición */
+    overflow: hidden;
+    /* Recorta el patrón */
+}
+
+/* Patrón de textura sutil */
+.icon-badge::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+        linear-gradient(45deg, #f5f5f5 25%, transparent 25%),
+        linear-gradient(-45deg, #f5f5f5 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, #f5f5f5 75%),
+        linear-gradient(-45deg, transparent 75%, #f5f5f5 75%);
+    background-size: 10px 10px;
+    background-position: 0 0, 0 5px, 5px -5px, -5px 0;
+    opacity: 0.3;
+    /* Ajusta la intensidad del patrón */
+}
+
+/* Imagen del icono de loto dorado */
+.lotus-icon {
+    width: 60%;
+    /* Tamaño del icono dentro del círculo */
+    height: auto;
+    position: relative;
+    /* Asegura que el icono esté por encima del patrón */
+}
+
+/* Estilo para el texto */
+.service-title {
+    font-family: 'Playfair Display', serif;
+    /* O la fuente que uses */
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* =====================================
+   GALERIA
+===================================== */
+/* Sección de Galería con estilo Premium */
+.gallery-section {
+    background-color: #fdfbf9e5;
+    /* Color crema suave estilo Spa */
+    padding: 80px 0;
+    /* Espacio superior e inferior generoso */
+}
+
+/* Opcional: si quieres un toque de lujo extra */
+.gallery-section::after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 80%;
+    background: linear-gradient(to right, transparent, #d4af37, transparent);
+    margin: 40px auto 0 auto;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 columnas */
+    grid-auto-rows: 250px;
+    /* Altura base */
+    gap: 15px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.item {
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.4s ease;
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* AQUÍ EL EFECTO: Define el tamaño de cada "caja" */
+.item-large {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+/* Imagen protagonista */
+.item-tall {
+    grid-row: span 2;
+}
+
+/* Vertical elegante */
+.item-wide {
+    grid-column: span 2;
+}
+
+/* Horizontal */
+
+/* Efecto Hover */
+.item:hover {
+    transform: scale(1.03);
+    z-index: 1;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .gallery-container {
+        grid-template-columns: 1fr;
+    }
+
+    .item {
+        grid-column: span 1 !important;
+        grid-row: span 1 !important;
+    }
+}
+
+/* =====================================
+   RESERVAS FORMULARIO
+===================================== */
+
+/* --- Sección de Reserva --- */
+.reservas-section {
+    padding: 80px 0;
+    background-color: #fdfbf9;
+    /* Color crema suave para coherencia */
+}
+
+/* El contenedor del formulario */
+.booking-card {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+    /* Sombra difusa y elegante */
+    border: 1px solid #f0f0f0;
+}
+
+/* Estilo de los campos de entrada */
+.form-label {
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+.form-control {
+    padding: 14px;
+    border-radius: 12px;
+    border: 1px solid #e0e0e0;
+    background-color: #fcfcfc;
+    transition: all 0.3s ease;
+    margin-bottom: 15px;
+}
+
+.form-control:focus {
+    border-color: var(--gold);
+    /* Usamos tu variable de color dorado */
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
+    outline: none;
+}
+
+/* El botón de WhatsApp (Llamado a la acción) */
+.btn-whatsapp-large {
+    background-color: #4f7a5b;
+    color: white;
+    border: none;
+    padding: 18px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    /* La sombra aplicada aquí */
+    box-shadow: 0 4px 15px rgba(79, 122, 91, 0.3);
+}
+
+.btn-whatsapp-large:hover {
+    background-color: #4f7a5b;
+    /* Un verde un poco más oscuro al pasar el mouse */
+    transform: translateY(-3px);
+    /* Mantenemos la sombra pero quizás un poquito más intensa */
+    color: white;
+    transform: translateY(-4px);
+    /* Movimiento más notorio */
+    box-shadow: 0 8px 20px rgba(79, 122, 91, 0.4);
+}
+
+/* Ajustes para móviles */
+@media (max-width: 768px) {
+    .booking-card {
+        padding: 25px;
+    }
+}
+
+
+/* =====================================
+    INFORMACIÓN DE CONTACTO
+===================================== */
+/* --- Sección General --- */
+.info-section {
+    background-color: #fcf9f5;
+    padding: 80px 0;
+}
+
+/* --- Tarjetas Principales --- */
+.main-card {
+    background: #ffffff;
+    border: 1px solid #efeae4;
+    border-radius: 25px;
+    padding: 30px;
+    height: 100%;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- Títulos de Tarjetas --- */
+.card-title {
+    color: #a68966;
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    font-family: 'Playfair Display', serif;
+}
+
+/* --- Bloque Interno (Crema) --- */
+.inner-box {
+    background-color: #f9f6f2;
+    border-radius: 20px;
+    padding: 20px;
+    border: 1px solid #eeebe5;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* --- Layout del Mapa (para la tarjeta de ubicación) --- */
+.map-card .card-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+}
+
+.map-bg {
+    width: 100%;
+    height: 150px;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid #eeebe5;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.map-bg iframe {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* --- Textos e Iconos --- */
+.icon-big {
+    font-size: 1.8rem;
+    color: #a68966;
+    min-width: 40px;
+    text-align: center;
+}
+
+.time-info p {
+    margin: 0;
+    color: #777;
+    font-size: 0.85rem;
+}
+
+.time-info h3 {
+    margin: 0;
+    color: #333;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+/* --- Botones --- */
+.btn-primary {
+    background: #a68966;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 15px;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background: #333;
+    color: #fff;
+}
+
+/* =====================================
+   FOOTER
+===================================== */
+
+.footer-section {
+    background-color: #1a1e1a;
+    /* Verde muy oscuro casi negro */
+    color: #e0e0e0;
+    padding: 60px 0 20px;
+    font-size: 0.9rem;
+}
+
+.brand-container {
+    display: flex;
+    align-items: center;
+    /* Alinea verticalmente el logo y el texto */
+    gap: 15px;
+    /* Espacio entre el logo y el nombre */
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 100px;
+    /* Ajusta el tamaño según tu logo */
+    height: auto;
+}
+
+.footer-brand {
+    margin: 0;
+    /* Elimina márgenes extra para que se alinee bien */
+    color: #d4b483;
+    /* Tu color dorado */
+    font-family: 'Playfair Display', serif;
+}
+
+.footer-section h5 {
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: #d4af37;
+}
+
+/* Caja de redes y botón */
+.social-box {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.social-icons a {
+    color: #e0e0e0;   /* mismo color del footer */
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #d4af37; /* dorado elegante al pasar mouse */
+    transform: translateY(-3px);
+}
+
+.social-icons i {
+    font-size: 1.8rem;  /* prueba entre 1.5rem y 2rem */
+}
+
+.btn-whatsapp-footer {
+    background-color: #4f7a5b;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-bottom {
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    color: #777;
+}
+
+/* =====================================
+   WHATSAPP FLOAT
+===================================== */
+
+.whatsapp-float {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: 65px;
+    height: 65px;
+    background-color: #4f7a5b;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    box-shadow: 0 10px 25px rgba(79, 122, 91, 0.4); /* Sombra con el color de la marca */
+    z-index: 9999;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none; /* Por si lo usas como etiqueta <a> */
+}
+
+.whatsapp-float:hover {
+    background-color: #128c7e; /* Verde más oscuro al pasar el mouse */
+    transform: scale(1.1);
+    box-shadow: 0 15px 35px rgba(79, 122, 91, 0.5);
+}
+
+/* Efecto de pulso sutil para atraer clics */
+.whatsapp-float::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px solid #4f7a5b;
+    animation: pulse-whatsapp 2s infinite;
+}
+
+@keyframes pulse-whatsapp {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.3); opacity: 0; }
+    100% { transform: scale(1.3); opacity: 0; }
+}

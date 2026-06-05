@@ -1,0 +1,49 @@
+sara-spa/
+│
+├── index.html
+│
+├── assets/
+│   │
+│   ├── css/
+│   │   ├── style.css
+│   │   ├── responsive.css
+│   │   └── animations.css
+│   │
+│   ├── js/
+│   │   ├── main.js
+│   │   ├── whatsapp.js
+│   │   └── gallery.js
+│   │
+│   ├── images/
+│   │   ├── hero/
+│   │   │   └── spa-hero.jpg
+│   │   │
+│   │   ├── services/
+│   │   │   ├── masaje-relajante.jpg
+│   │   │   ├── terapia-corporal.jpg
+│   │   │   ├── tratamiento-facial.jpg
+│   │   │   └── parejas.jpg
+│   │   │
+│   │   ├── gallery/
+│   │   │   ├── galeria1.jpg
+│   │   │   ├── galeria2.jpg
+│   │   │   ├── galeria3.jpg
+│   │   │   └── ...  
+│   │   │
+│   │   └── logo/
+│   │       ├── logo.png
+│   │       └── favicon.ico
+│   │
+│   └── icons/
+│       ├── professional.svg
+│       ├── clean.svg
+│       ├── clock.svg
+│       └── ...
+│
+├── pages/
+│   ├── servicios.html
+│   ├── promociones.html
+│   ├── galeria.html
+│   └── contacto.html
+│
+└── README.md
