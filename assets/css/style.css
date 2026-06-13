@@ -196,6 +196,14 @@ section {
 /* =====================================
    HERO BACKGROUND
 ===================================== */
+#inicio {
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+
+#inicio.hero-loaded {
+    opacity: 1;
+}
 
 #inicio {
     position: relative;

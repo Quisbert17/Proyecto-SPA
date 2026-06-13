@@ -6,6 +6,20 @@
    → Fecha mínima en formulario (hoy)
 ============================================= */
 
+const heroSection = document.getElementById('inicio');
+const heroImage = new Image();
+
+heroImage.src = 'assets/images/hero/spa-hero.jpg';
+
+heroImage.onload = () => {
+    heroSection.classList.add('hero-loaded');
+};
+
+// Por si ya estaba en caché
+if (heroImage.complete) {
+    heroSection.classList.add('hero-loaded');
+}
+
 
 document.addEventListener('DOMContentLoaded', () => {
 
