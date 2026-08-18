@@ -1,0 +1,91 @@
+/* =====================================
+   SECCIÓN VIDEO (TikTok) — Sara Spa
+   Archivo independiente: si se elimina la
+   sección del HTML, este archivo se puede
+   borrar sin afectar el resto del sitio.
+===================================== */
+
+.video-section {
+    text-align: center;
+}
+
+.video-embed-wrapper {
+    position: relative;
+    max-width: 605px;
+    min-height: 300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Mensaje mientras carga el embed de TikTok */
+.video-loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: var(--gray);
+    background: var(--beige);
+    border-radius: var(--radius);
+    z-index: 0;
+}
+
+.video-loading i {
+    font-size: 2.5rem;
+    color: var(--gold);
+}
+
+.video-loading p {
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+@keyframes spinSlow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.fa-spin-slow {
+    animation: spinSlow 2.5s linear infinite;
+}
+
+/* El blockquote de TikTok queda por encima del loading una vez cargado */
+.tiktok-embed {
+    position: relative;
+    z-index: 1;
+    margin: 0 auto !important;
+}
+
+/* Botón "Síguenos en TikTok" con tu estilo de marca */
+.btn-tiktok-follow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #000000, #333333);
+    color: white;
+    padding: 12px 28px;
+    border-radius: 50px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-tiktok-follow:hover {
+    transform: translateY(-4px);
+    color: white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 480px) {
+    .video-embed-wrapper {
+        min-height: 400px;
+    }
+}

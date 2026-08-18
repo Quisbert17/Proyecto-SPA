@@ -53,6 +53,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
     <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/video.css">
 </head>
 
 <body>
@@ -174,8 +175,8 @@
     </section>
 
     <!-- =========================
-         SERVICIOS
-    ========================== -->
+     SERVICIOS
+========================== -->
 
     <section class="section-light" id="servicios">
 
@@ -187,61 +188,79 @@
                 <p class="section-subtitle">Terapias diseñadas para mejorar tu bienestar físico y mental..</p>
             </div>
 
-            <div class="row g-4">
+            <div class="services-carousel-wrapper">
 
-                <!-- Servicio 1 -->
-                <div class="col-lg-3 col-md-6 reveal reveal-delay-1">
-                    <div class="service-card">
-                        <img src="assets/images/services/masaje-relajante.jpg" alt="Masaje Relajante">
-                        <div class="icon-circle"><i class="fa-solid fa-spa"></i></div>
-                        <div class="service-content">
-                            <h4>Masajes Relajantes</h4>
-                            <p>Técnicas que alivian el estrés, mejoran la circulación y renuevan tu energía.</p>
-                            <div class="service-price">Desde <strong>Bs. 150</strong> | 60 min</div>
+                <!-- Botón Anterior -->
+                <button class="carousel-btn carousel-btn-prev" id="servPrev" aria-label="Servicio anterior">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+
+                <!-- Track deslizable -->
+                <div class="services-track" id="servTrack">
+
+                    <!-- Servicio 1 -->
+                    <div class="service-slide reveal reveal-delay-1">
+                        <div class="service-card">
+                            <img src="assets/images/services/masaje-relajante.jpg" alt="Masaje Relajante">
+                            <div class="icon-circle"><i class="fa-solid fa-spa"></i></div>
+                            <div class="service-content">
+                                <h4>Masajes Relajantes</h4>
+                                <p>Técnicas que alivian el estrés, mejoran la circulación y renuevan tu energía.</p>
+                                <div class="service-price">Desde <strong>Bs. 150</strong> | 60 min</div>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Servicio 2 -->
-                <div class="col-lg-3 col-md-6 reveal reveal-delay-2">
-                    <div class="service-card">
-                        <img src="assets/images/services/tratamiento-facial.jpg" alt="Tratamientos Faciales">
-                        <div class="icon-circle"><i class="fa-solid fa-face-smile"></i></div>
-                        <div class="service-content">
-                            <h4>Tratamientos Faciales</h4>
-                            <p>Limpieza profunda, hidratación y nutrición para una piel radiante y saludable.</p>
-                            <div class="service-price">Desde <strong>Bs. 180</strong> | 60 min</div>
+                    <!-- Servicio 2 -->
+                    <div class="service-slide reveal reveal-delay-2">
+                        <div class="service-card">
+                            <img src="assets/images/services/tratamiento-facial.jpg" alt="Tratamientos Faciales">
+                            <div class="icon-circle"><i class="fa-solid fa-face-smile"></i></div>
+                            <div class="service-content">
+                                <h4>Tratamientos Faciales</h4>
+                                <p>Limpieza profunda, hidratación y nutrición para una piel radiante y saludable.</p>
+                                <div class="service-price">Desde <strong>Bs. 180</strong> | 60 min</div>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Servicio 3 -->
-                <div class="col-lg-3 col-md-6 reveal reveal-delay-3">
-                    <div class="service-card">
-                        <img src="assets/images/services/terapia-corporal.jpg" alt="Terapias Corporales">
-                        <div class="icon-circle"><i class="fa-solid fa-hot-tub-person"></i></div>
-                        <div class="service-content">
-                            <h4>Terapias Corporales</h4>
-                            <p>Exfoliaciones, envolturas y tratamientos que transforman tu piel y tu día.</p>
-                            <div class="service-price">Desde <strong>Bs. 200</strong> | 75 min</div>
+                    <!-- Servicio 3 -->
+                    <div class="service-slide reveal reveal-delay-3">
+                        <div class="service-card">
+                            <img src="assets/images/services/terapia-corporal.jpg" alt="Terapias Corporales">
+                            <div class="icon-circle"><i class="fa-solid fa-hot-tub-person"></i></div>
+                            <div class="service-content">
+                                <h4>Terapias Corporales</h4>
+                                <p>Exfoliaciones, envolturas y tratamientos que transforman tu piel y tu día.</p>
+                                <div class="service-price">Desde <strong>Bs. 200</strong> | 75 min</div>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Servicio 4 -->
-                <div class="col-lg-3 col-md-6 reveal reveal-delay-4">
-                    <div class="service-card">
-                        <img src="assets/images/services/parejas.jpg" alt="Spa para Parejas">
-                        <div class="icon-circle"><i class="fa-solid fa-heart"></i></div>
-                        <div class="service-content">
-                            <h4>Spa para Parejas</h4>
-                            <p>Momentos únicos para compartir relajación y bienestar en pareja.</p>
-                            <div class="service-price">Desde <strong>Bs. 350</strong> | 90 min</div>
+                    <!-- Servicio 4 -->
+                    <div class="service-slide reveal reveal-delay-4">
+                        <div class="service-card">
+                            <img src="assets/images/services/parejas.jpg" alt="Spa para Parejas">
+                            <div class="icon-circle"><i class="fa-solid fa-heart"></i></div>
+                            <div class="service-content">
+                                <h4>Spa para Parejas</h4>
+                                <p>Momentos únicos para compartir relajación y bienestar en pareja.</p>
+                                <div class="service-price">Desde <strong>Bs. 350</strong> | 90 min</div>
+                            </div>
                         </div>
                     </div>
+
+                    <!-- Cuando llegue el catálogo, agregas más .service-slide aquí, mismo formato -->
+
                 </div>
+
+                <!-- Botón Siguiente -->
+                <button class="carousel-btn carousel-btn-next" id="servNext" aria-label="Siguiente servicio">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
 
             </div>
+
             <div class="text-center mt-5">
                 <a href="#reservas" class="btn btn-whatsapp btn-lg">
                     <i class="fab fa-whatsapp"></i> Reservar una Cita
@@ -272,6 +291,43 @@
                 <div class="item item-small"><img src="assets/images/gallery/galeria5.png" alt="Spa 5"></div>
                 <div class="item item-small"><img src="assets/images/gallery/galeria6.png" alt="Spa 6"></div>
             </div>
+        </div>
+    </section>
+
+    <!-- =========================
+     VIDEO DEL SPA (TikTok)
+    ========================== -->
+
+    <section class="section-white video-section" id="video">
+        <div class="container">
+
+            <div class="text-center mb-5">
+                <span class="section-label">Conócenos</span>
+                <h2 class="section-title"><i class="fab fa-tiktok"></i> Nuestro Spa en Video</h2>
+                <p class="section-subtitle">Descubre el ambiente y la experiencia de Sara Spa.</p>
+            </div>
+
+            <div class="video-embed-wrapper reveal reveal-delay-1" id="videoWrapper">
+                <div class="video-loading" id="videoLoading">
+                    <i class="fab fa-tiktok fa-spin-slow"></i>
+                    <p>Cargando video...</p>
+                </div>
+
+                <!-- Reemplaza la URL y el data-video-id con los del video real -->
+                <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@usuario/video/VIDEO_ID"
+                    data-video-id="VIDEO_ID" style="max-width: 605px; min-width: 325px;">
+                    <section>
+                        <a target="_blank" href="https://www.tiktok.com/@usuario">@usuario</a>
+                    </section>
+                </blockquote>
+            </div>
+
+            <div class="text-center mt-4">
+                <a href="https://www.tiktok.com/@usuario" target="_blank" class="btn-tiktok-follow">
+                    <i class="fab fa-tiktok"></i> Síguenos en TikTok
+                </a>
+            </div>
+
         </div>
     </section>
 
@@ -490,6 +546,9 @@
     <script src="assets/js/main.js"></script>
     <script src="assets/js/whatsapp.js"></script>
     <script src="assets/js/gallery.js"></script>
+    <script src="assets/js/servicios-carousel.js"></script>
+    <script async src="https://www.tiktok.com/embed.js"></script>
+    <script src="assets/js/video.js"></script>
 
 </body>
 

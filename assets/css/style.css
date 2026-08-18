@@ -576,6 +576,58 @@ section {
 }
 
 /* =====================================
+   CARRUSEL DE SERVICIOS
+===================================== */
+
+.services-carousel-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.services-track {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding: 30px 10px 10px;
+    /* padding-top 30px: deja espacio para que el icon-circle no se corte */
+    scrollbar-width: none;
+}
+
+.services-track::-webkit-scrollbar {
+    display: none;
+}
+
+.service-slide {
+    flex: 0 0 260px;
+    scroll-snap-align: start;
+}
+
+.carousel-btn {
+    background: var(--gold);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.carousel-btn:hover {
+    opacity: 0.85;
+    transform: scale(1.08);
+}
+
+/* =====================================
    GALERIA
 ===================================== */
 /* Sección de Galería con estilo Premium */
